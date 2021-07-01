@@ -1,0 +1,639 @@
+@media (min-width: 1196px) {
+    
+
+.start {
+    padding:  40px;
+}
+
+.inner-container {
+    background:  #fff;
+    padding:  50px;
+
+}
+
+.in-container {
+    width: 70%;
+    background:  #fff;
+    padding:  15px 50px 20px 30px;
+    box-shadow: 00px 2px 6px rgba(0, 0, 0, 0.16);
+    margin-right: 30px;
+    margin-bottom:  10%;
+}
+
+.form-container {
+    padding-left: 20px;
+}
+
+hr {
+    border: 1px solid #DDDBDA;
+}
+
+.containers input{
+    width: 60%;
+    border: 1px solid #333;
+    border-radius: 4px;
+    height: 23px;
+    padding-left: 10px;
+}
+
+.containers button {
+    background:  #fff;
+    padding:  5px 10px 5px 10px;
+    border-radius: 4px;
+    border:  1px solid green;
+    color:  green;
+}
+
+.form-container select {
+    height: 32px;
+    left: 308px;
+    right: 1071px;
+    top: 511px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 4px;
+    Width:51px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.form-container button {
+    height: 32px;
+    left: 212px;
+    right: 1174px;
+    top: 682px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 54px;
+}
+
+.form-container input {
+    height: 32px;
+    left: 212px;
+    right: 1174px;
+    top: 682px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 0 4px 4px 0;
+    width: 12%;
+}
+
+label {
+    border:  1px solid #C4C4C4;
+    padding:  7px;
+    margin-right:-5px;
+    border-radius: 5px 0 0 5px;
+}
+
+
+.contain {
+    margin-bottom: 20px;
+}
+
+.containers {
+box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+padding: 30px;
+}
+
+.containers ul {
+list-style-type: none;
+padding:  0;
+}
+
+.containers ul li {
+margin-bottom:  20px;
+}
+
+
+.containers .have {
+color:  #0070D2;
+}
+
+.checkout {
+margin-top: 20px;
+border: none;
+width: 20%;
+border-radius: 5px;
+padding:  15px 20px;
+background:  #0EB58A;
+color:  #fff;
+cursor:  pointer;
+}
+
+.containers p a {
+text-decoration: none;
+color: #0070D2;
+}
+
+.containers ul li {
+font-size: 13px;
+}
+
+.containers ul li span {
+float: right;
+}
+
+.top-bar {
+width: 70%;
+
+}
+
+.top-bar img {
+width: 20px;
+float: left;
+margin-right: 10px;
+}
+
+.top-bar p {
+width: 20%;
+}
+
+.top-bar a{
+text-decoration: none;
+color:  #000;
+}
+
+.sales-red {
+    color: red;
+    font-size: 12px;
+}
+
+.sales-ccc {
+    color: #c3bfbf;
+    font-size: 12px;
+}
+
+.alert-down {
+    padding: 1px;
+    background: #e6d7d7;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.alert-down p {
+    padding-left: 20px
+}
+
+.contain button {
+    margin-right: 10px
+}
+
+.contain .donate {
+    margin-left: 5px
+}
+
+.promo-input input {
+    width: 55%;
+    margin-right: 2%
+}
+
+.free-p {
+    width: 5%;
+}
+
+.order-summary {
+    width: 20%;
+    float: left;
+}
+
+.vip-text {
+    width: 10%;
+    float: left;
+    margin: 0;
+    margin-top: 1%;
+}
+
+}
+
+
+@media (max-width: 600px) {
+    
+
+    
+    
+    .inner-container {
+        background:  #fff;
+        padding:  50px;
+    
+    }
+    
+    .in-container {
+        width: 95%;
+        background:  #fff;
+        padding:  15px 50px 20px 30px;
+        box-shadow: 00px 2px 6px rgba(0, 0, 0, 0.16);
+        margin-bottom:  10%;
+    }
+
+    .top-contain select {
+        margin-left: 2%
+    }
+
+    .donate-text {
+        margin-right: 30px
+    }
+
+    .vip-text {
+        float: left;
+        margin: 0;
+        margin-top: 1%;
+        margin-right: 10px;
+    }
+    
+    .form-container {
+        padding-left: 20px;
+    }
+    
+    hr {
+        border: 1px solid #DDDBDA;
+    }
+    
+    .containers input{
+        width: 60%;
+        border: 1px solid #333;
+        border-radius: 4px;
+        height: 23px;
+        padding-left: 10px;
+    }
+    
+    .containers button {
+        background:  #fff;
+        padding:  5px 10px 5px 10px;
+        border-radius: 4px;
+        border:  1px solid green;
+        color:  green;
+    }
+    
+    .form-container select {
+        height: 32px;
+        left: 308px;
+        right: 1071px;
+        top: 511px;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 4px;
+        Width:51px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .form-container button {
+        height: 32px;
+        left: 212px;
+        right: 1174px;
+        top: 682px;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 54px;
+    }
+    
+    .form-container input {
+        height: 32px;
+        left: 212px;
+        right: 1174px;
+        top: 682px;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 0 4px 4px 0;
+        width: 12%;
+    }
+    
+    label {
+        border:  1px solid #C4C4C4;
+        padding:  7px;
+        margin-right:-5px;
+        border-radius: 5px 0 0 5px;
+    }
+    
+    
+    .contain {
+        margin-bottom: 20px;
+    }
+    
+    .containers {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+    padding: 30px;
+    }
+    
+    .containers ul {
+    list-style-type: none;
+    padding:  0;
+    }
+    
+    .containers ul li {
+    margin-bottom:  20px;
+    }
+    
+    
+    .containers .have {
+    color:  #0070D2;
+    }
+    
+    .checkout {
+    margin-top: 20px;
+    border: none;
+    width: 55%;
+    border-radius: 5px;
+    padding:  15px 20px;
+    background:  #0EB58A;
+    color:  #fff;
+    cursor:  pointer;
+    margin-bottom: 10%
+    }
+
+    .contain .donate {
+        padding-left: 2%;
+        width: 30%;
+    }
+    
+    .containers p a {
+    text-decoration: none;
+    color: #0070D2;
+    }
+    
+    .containers ul li {
+    font-size: 13px;
+    }
+    
+    .containers ul li span {
+    float: right;
+    }
+    
+    .top-bar {
+        width: 50%;
+    }
+    
+    .top-bar img {
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+    }
+    
+    .top-bar p {
+    width: 100%;
+    }
+    
+    .top-bar a{
+    text-decoration: none;
+    color:  #000;
+    }
+
+    .order-summary {
+        width: 55%;
+        float: left;
+    }
+    
+    .sales-red {
+        color: red;
+        font-size: 12px;
+    }
+    
+    .sales-ccc {
+        color: #c3bfbf;
+        font-size: 12px;
+    }
+    
+    .alert-down {
+        padding: 1px;
+        background: #e6d7d7;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    
+    .alert-down p {
+        padding-left: 20px
+    }
+    
+    .contain button {
+        margin-right: 10px
+    }
+    
+    .contain .donate {
+        margin-left: 5px
+    }
+    
+    .promo-input input {
+        width: 55%;
+        margin-right: 2%
+    }
+    
+    }
+
+
+    
+@media (min-width: 601px) and (max-width: 1195px) {
+    
+
+    
+    
+    .inner-container {
+        background:  #fff;
+        padding:  50px;
+    
+    }
+    
+    .in-container {
+        width: 95%;
+        background:  #fff;
+        padding:  15px 50px 20px 30px;
+        box-shadow: 00px 2px 6px rgba(0, 0, 0, 0.16);
+        margin-bottom:  10%;
+    }
+
+    .top-contain select {
+        margin-left: 2%
+    }
+
+    .donate-text {
+        margin-right: 3%
+    }
+    
+    .form-container {
+        padding-left: 20px;
+    }
+    
+    hr {
+        border: 1px solid #DDDBDA;
+    }
+    
+    .containers input{
+        width: 60%;
+        border: 1px solid #333;
+        border-radius: 4px;
+        height: 23px;
+        padding-left: 10px;
+    }
+    
+    .containers button {
+        background:  #fff;
+        padding:  5px 10px 5px 10px;
+        border-radius: 4px;
+        border:  1px solid green;
+        color:  green;
+    }
+    
+    .form-container select {
+        height: 32px;
+        left: 308px;
+        right: 1071px;
+        top: 511px;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 4px;
+        Width:51px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .form-container button {
+        height: 32px;
+        left: 212px;
+        right: 1174px;
+        top: 682px;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 54px;
+    }
+    
+    .form-container input {
+        height: 32px;
+        left: 212px;
+        right: 1174px;
+        top: 682px;
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 0 4px 4px 0;
+        width: 12%;
+    }
+    
+    label {
+        border:  1px solid #C4C4C4;
+        padding:  7px;
+        margin-right:-5px;
+        border-radius: 5px 0 0 5px;
+    }
+    
+    
+    .contain {
+        margin-bottom: 20px;
+    }
+    
+    .containers {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+    padding: 30px;
+    }
+    
+    .containers ul {
+    list-style-type: none;
+    padding:  0;
+    }
+    
+    .containers ul li {
+    margin-bottom:  20px;
+    }
+    
+    
+    .containers .have {
+    color:  #0070D2;
+    }
+    
+    .checkout {
+    margin-top: 20px;
+    border: none;
+    width: 30%;
+    border-radius: 5px;
+    padding:  15px 20px;
+    background:  #0EB58A;
+    color:  #fff;
+    cursor:  pointer;
+    margin-bottom: 10%
+    }
+
+    .contain .donate {
+        padding-left: 2%;
+        width: 15%;
+    }
+    
+    .containers p a {
+    text-decoration: none;
+    color: #0070D2;
+    }
+    
+    .containers ul li {
+    font-size: 13px;
+    }
+    
+    .containers ul li span {
+    float: right;
+    }
+    
+    .top-bar {
+        width: 50%;
+    }
+    
+    .top-bar img {
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+    }
+    
+    .top-bar p {
+    width: 100%;
+    }
+    
+    .top-bar a{
+    text-decoration: none;
+    color:  #000;
+    }
+
+    .order-summary {
+        width: 30%;
+    }
+    
+    .sales-red {
+        color: red;
+        font-size: 12px;
+    }
+    
+    .sales-ccc {
+        color: #c3bfbf;
+        font-size: 12px;
+    }
+    
+    .alert-down {
+        padding: 1px;
+        background: #e6d7d7;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    
+    .alert-down p {
+        padding-left: 20px
+    }
+    
+    .contain button {
+        margin-right: 10px
+    }
+    
+    .contain .donate {
+        margin-left: 5px
+    }
+    
+    .promo-input input {
+        width: 55%;
+        margin-right: 2%
+    }
+    
+    }

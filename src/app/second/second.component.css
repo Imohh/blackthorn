@@ -1,0 +1,664 @@
+
+
+
+@media (min-width: 1196px) {
+	.back-arrow p a{
+		color: #000;
+		text-decoration: none;
+	}
+
+	.back-arrow p a:hover{
+		color: red;
+		text-decoration: none;
+	}
+
+	.container {
+		margin-bottom: 20px
+	}
+
+	.form-container {
+		padding: 20px;
+	}
+
+	.inner-container {
+		background:  #fff;
+		padding:  50px;
+			box-shadow: 00px 2px 6px rgba(0, 0, 0, 0.16);
+	}
+
+	.in-container {
+		background:  #fff;
+		padding:  15px 20px 20px 30px;
+			box-shadow: 00px 2px 6px rgba(0, 0, 0, 0.16);
+	}
+
+	input[type="text"] {
+		border:  1px solid #C4C4C4;
+		padding:  0 0 0 20px;
+
+		width: 100%;
+		background: #FFFFFF;
+		box-sizing: border-box;
+		border-radius: 4px;
+		height: 45px;
+		left: 211px;
+		right: 528px;
+		top: 906px;
+		margin-bottom:  20px;
+	}
+
+	input[type="radio"]:checked::after {
+		background: green;
+	}
+
+	input[type="radio"]:checked::before {
+		background: green;
+	}
+
+	input[type="radio"]:after {
+		background: green;
+	}
+
+	input[type="radio"]::before {
+		background: green;
+	}
+
+	input[type="radio"]:checked {
+		background: green;
+	}
+
+	input[name='lastname'] {
+		width: 48%;
+		margin-top: -18px;
+		display: block;
+	}
+
+	input[name='firstname'] {
+		width: 48%;
+		float: left;
+		margin-right:17px;
+	}
+
+	form {
+		width: 100%;
+	}
+
+	.top-ul {
+		width: 70%;
+		margin-top: 5%;
+		margin-bottom:  20px;
+	}
+
+	.top-ul input[type=radio] {
+		display: block;
+		margin:  0 auto;
+	}
+
+	.top-ul label {
+		display: inline-block;
+	}
+
+	.top-ul .label1 {
+		padding-right:  315px;
+	}
+
+	.top-ul .label2 {
+		padding-right:  315px;
+	}
+
+
+	.in-container img {
+		background:  rgba(14, 181, 138, 0.11);
+		padding:  10px;
+		width: 60px;
+		height: 60px;
+	}
+
+	.in-container .fill {
+		float: right;
+		background:  red;
+	}
+
+	.in-container .rush {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.in-container .reg {
+		font-family: Salesforce Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 18px;
+	}
+
+	.in-container .reg span {
+		float: right;
+		color: #0070D2;
+	}
+
+	.header-h1 {
+		width: 193px;
+		height: 18px;
+		left: 211px;
+		top: 423px;
+
+		font-family: Salesforce Sans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		line-height: 18px;
+	}
+
+	.would {
+		width: 701px;
+		height: 24px;
+		left: 211px;
+		top: 574px;
+
+		font-family: Salesforce Sans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 15px;
+		line-height: 22px;
+	}
+
+
+
+
+
+
+	.containers {
+		box-shadow: 00px 2px 6px rgba(0, 0, 0, 0.16);
+		padding: 30px;
+	}
+
+	.containers ul {
+		list-style-type: none;
+		padding:  0;
+	}
+
+	.containers ul li {
+		margin-bottom:  20px;
+		font-size:  12px;
+	}
+
+	.containers .total li {
+		font-weight: 600;
+	}
+
+	button {
+		margin-top: 20px;
+		border: none;
+		width: 100%;
+		border-radius: 5px;
+		padding:  15px 20px;
+		background: #0EB58A;
+		color:  #fff;
+		cursor:  pointer;
+	}
+
+	.containers p a {
+		text-decoration: none;
+		color: #0070D2;
+	}
+
+	.containers ul li span {
+		float: right;
+	}
+
+	.containers .have {
+		color:  #0070D2;
+	}
+
+
+
+
+
+
+
+	.accordion > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.accordion .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+
+.accordion label {
+  display: block;
+}
+
+/*
+ Styling
+*/
+.accordion {
+  margin-bottom: 1em;
+  width: 70%;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  padding: 15px 50px 50px 50px;
+  border: 1px solid #e8e8e8;
+  border-top: 0;
+}
+
+.accordion .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+}
+
+.accordion label {
+  color: #333;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+}
+
+
+/*
+ Demo purposes only
+*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+
+.accordion {
+  max-width: 65em;
+}
+
+.accordion p:last-child {
+  margin-bottom: 0;
+}
+
+.content .header-h1 {
+	width: 100%;
+}
+
+.accordion {
+	border-radius: 4px;
+	box-shadow: 00px 2px 6px rgba(0, 0, 0, 0.16);
+	position:  absolute;
+}
+
+
+.top-bar {
+	width: 70%;
+
+}
+
+.top-bar img {
+	width: 20px;
+	float: left;
+	margin-right: 10px;
+}
+
+.top-bar p {
+	width: 20%;
+}
+
+.top-bar a{
+	text-decoration: none;
+	color:  #000;
+}
+
+.start {
+	padding: 20px;
+	margin:  0 auto;
+	width: 90%;
+}
+
+.right-bar {
+	background:  red;
+}
+
+}
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+	.back-arrow p a{
+		color: #000;
+		text-decoration: none;
+	}
+
+	.back-arrow p a:hover{
+		color: red;
+		text-decoration: none;
+	}
+
+	.container {
+		margin-bottom: 20px
+	}
+
+	.form-container {
+		padding: 20px;
+	}
+
+	.inner-container {
+		background:  #fff;
+		padding:  50px;
+			box-shadow: 00px 2px 6px rgba(0, 0, 0, 0.16);
+	}
+
+	.in-container {
+		background:  #fff;
+		padding:  15px 20px 20px 30px;
+			box-shadow: 00px 2px 6px rgba(0, 0, 0, 0.16);
+	}
+
+	input[type="text"] {
+		border:  1px solid #C4C4C4;
+		padding:  0 0 0 20px;
+
+		width: 100%;
+		background: #FFFFFF;
+		box-sizing: border-box;
+		border-radius: 4px;
+		height: 45px;
+		left: 211px;
+		right: 528px;
+		top: 906px;
+		margin-bottom:  20px;
+	}
+
+	input[type="radio"]:checked::after {
+		background: green;
+	}
+
+	input[type="radio"]:checked::before {
+		background: green;
+	}
+
+	input[type="radio"]:after {
+		background: green;
+	}
+
+	input[type="radio"]::before {
+		background: green;
+	}
+
+	input[type="radio"]:checked {
+		background: green;
+	}
+
+	input[name='lastname'] {
+		width: 48%;
+		margin-top: -18px;
+		display: block;
+	}
+
+	input[name='firstname'] {
+		width: 48%;
+		float: left;
+		margin-right:17px;
+	}
+
+	form {
+		width: 100%;
+	}
+
+	.top-ul {
+		width: 100%;
+		margin-top: 5%;
+		margin-bottom:  20px;
+	}
+
+	.top-ul input[type=radio] {
+		display: block;
+		margin:  0 auto;
+	}
+
+	.top-ul label {
+		display: inline-block;
+	}
+
+	.top-ul .label1 {
+		padding-right:  85px;
+	}
+
+	.top-ul .label2 {
+		padding-right:  85px;
+	}
+
+
+	.in-container img {
+		background:  rgba(14, 181, 138, 0.11);
+		padding:  10px;
+		width: 60px;
+		height: 60px;
+	}
+
+	.in-container .fill {
+		float: right;
+		background:  red;
+	}
+
+	.in-container .rush {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.in-container .reg {
+		font-family: Salesforce Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		line-height: 18px;
+	}
+
+	.in-container .reg span {
+		float: right;
+		color: #0070D2;
+	}
+
+	.header-h1 {
+		width: 193px;
+		height: 18px;
+		left: 211px;
+		top: 423px;
+
+		font-family: Salesforce Sans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 17px;
+		line-height: 18px;
+	}
+
+	.would {
+		width: 701px;
+		height: 24px;
+		left: 211px;
+		top: 574px;
+
+		font-family: Salesforce Sans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 15px;
+		line-height: 22px;
+	}
+
+
+
+
+
+
+	.containers {
+		box-shadow: 00px 2px 6px rgba(0, 0, 0, 0.16);
+		padding: 30px;
+	}
+
+	.containers ul {
+		list-style-type: none;
+		padding:  0;
+	}
+
+	.containers ul li {
+		margin-bottom:  20px;
+		font-size:  12px;
+	}
+
+	.containers .total li {
+		font-weight: 600;
+	}
+
+	button {
+		margin-top: 20px;
+		border: none;
+		width: 100%;
+		border-radius: 5px;
+		padding:  15px 20px;
+		background: #0EB58A;
+		color:  #fff;
+		cursor:  pointer;
+	}
+
+	.containers p a {
+		text-decoration: none;
+		color: #0070D2;
+	}
+
+	.containers ul li span {
+		float: right;
+	}
+
+	.containers .have {
+		color:  #0070D2;
+	}
+
+
+
+
+
+
+
+	.accordion > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.accordion .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+
+.accordion label {
+  display: block;
+}
+
+/*
+ Styling
+*/
+.accordion {
+  margin-bottom: 1em;
+  width: 70%;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  padding: 15px 50px 50px 50px;
+  border: 1px solid #e8e8e8;
+  border-top: 0;
+}
+
+.accordion .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+}
+
+.accordion label {
+  color: #333;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+}
+
+
+/*
+ Demo purposes only
+*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+
+.accordion {
+  max-width: 65em;
+}
+
+.accordion p:last-child {
+  margin-bottom: 0;
+}
+
+.content .header-h1 {
+	width: 100%;
+}
+
+.accordion {
+	border-radius: 4px;
+	box-shadow: 00px 2px 6px rgba(0, 0, 0, 0.16);
+	position:  absolute;
+}
+
+
+.top-bar {
+	width: 70%;
+
+}
+
+.top-bar img {
+	width: 20px;
+	float: left;
+	margin-right: 10px;
+}
+
+.top-bar p {
+	width: 20%;
+}
+
+.top-bar a{
+	text-decoration: none;
+	color:  #000;
+}
+
+.start {
+	padding: 20px;
+	margin:  0 auto;
+	width: 100%;
+}
+
+.right-bar {
+	background:  red;
+}
+
+}

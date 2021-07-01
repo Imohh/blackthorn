@@ -1,0 +1,163 @@
+
+<div class="top-bar">
+	<a href="#"><img src="../../assets/img/icon.png">
+	<p>Alumni Weekend</p></a>
+</div>
+
+
+<section class="start">
+
+
+<form name="myForm" novalidate>
+	<section class="in-container" style="float: left;">
+		<div class="form-container form-group">
+			<div class="contain top-contain">
+				<h1>Free Ticket</h1>
+				<p>Free ticket for anyone to make a valuable contribution towards our future online events programme. Thank you.</p>
+				<p class="sales-red" *ngIf="!freeTicket.dirty">Sales end in 1 hour</p>
+
+				<p class="free-p" style="float: left;margin: 0;margin-top: 1%">Free</p>
+				<select 
+                (change)="changeHandler($event)" 
+                ngModel 
+                name="freeTicket" 
+                #freeTicket="ngModel"
+                >
+                    <option value="">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+				</select>
+			</div>
+            <div class="alert-down" *ngIf="freeTicket.dirty">
+                <p>Only 2 tickets available. join waitlist</p>
+            </div>
+			<hr><br>
+		</div>
+
+		<div class="form-container">
+			<div class="contain">
+				<h1>Alumni VIP Ticket</h1>
+				<p>This livestream will broadcast via a private YouTube link that will be sent to ticket purchasers an hour prior to showtime</p>
+				<p class="sales-ccc">Sales end in 5 days</p>
+
+                <span *ngFor="let item of posts">
+                    <p class="vip-text">${{item.amount}}</p>
+                    
+                </span>
+				<span>
+                    <select 
+                    (change)="changeHandler2($event)"
+                    ngModel 
+                    name="vipAlumni" 
+                    #vipAlumni="ngModel">
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+				    </select>
+                    
+                    
+                </span>
+			</div>
+            <div class="alert-down" *ngIf="vipAlumni.dirty">
+                <p>{{selectedAmount2}} Ticket Added to cart. Cancel</p>
+            </div>
+			<hr><br>
+		</div>
+
+		<div class="form-container">
+			<div class="contain">
+				<h1>Donate</h1>
+				<p>Access to arts is vital. Pay what you can.</p>
+				<p>I want to donate</p>
+                <span (change)="changeHandler4($event)">
+                    <button type="submit" value="50">$50</button>
+		    		<button type="submit" value="100">$100</button>
+			    	<button type="submit" value="200">$200</button>
+				    <button type="submit" value="500">$500</button>
+                </span>
+				<label>$</label>
+				<input class="donate" type="text" name="input" placeholder="Enter amount">
+			</div>
+			<hr>
+		</div>
+
+		<div class="form-container">
+			<div class="contain">
+				<img class="image" src="../../assets/img/image-2.png" alt="image" width="80px" style="float: left;margin-right: 20px;">
+				<h4>Book: Good Strategy - Bad Strategy</h4>
+				<p>Learn from the experts of business process management</p>
+                <span *ngFor="let item of posts" class="donate-text">
+                    <p style="width: 7%;float: left;margin: 0;margin-top: 1%">${{item.amount3}}</p>
+                </span>
+				<span>
+                    <select 
+                    (change)="changeHandler3($event)"
+                    ngModel 
+                    name="book" 
+                    #book="ngModel">
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+			    	</select>
+                </span>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- <app-order-summary></app-order-summary> -->
+
+	<section class="order-summary">
+	<div class="containers">
+		<div>
+			<h1>Order Summary</h1>
+			<ul>
+				<li *ngIf="freeTicket.dirty">{{selectedAmount}}x Free Ticket <span>$0.00</span></li>
+				<span *ngFor="let item of posts">
+                    <li *ngIf="vipAlumni.dirty">{{selectedAmount2}} Alumni VIP Ticket <span>${{(selectedAmount2 * item.amount)}}</span></li>
+                </span>
+            </ul>
+            <ul>
+				<span *ngFor="let item of posts">
+                    <li>{{selectedAmount4}} Donation <span>${{(selectedAmount4 * item.amount3)}}</span></li>
+                </span>
+            </ul>
+            <ul>
+				<span *ngFor="let item of posts">
+                    <li *ngIf="book.dirty">{{selectedAmount3}} Book: Good Strategy... <span>${{(selectedAmount3 * item.amount3)}}</span></li>
+                </span>
+            </ul>
+			<hr>
+			<ul>
+                <span *ngFor="let item of posts">
+                    <li>subtotal <span>${{(selectedAmount3 * item.amount3 + item.amount * selectedAmount2)}}</span></li>
+                </span>
+				<span *ngFor="let item of posts">
+                    <li *ngIf="selectedAmount2 || selectedAmount3">Taxes <span>${{item.taxes}}</span></li>
+                </span>
+			</ul>
+			<hr>
+			<ul class="total" *ngFor="let item of posts">
+				<li>Total <span *ngIf="selectedAmount2 || selectedAmount3">${{(selectedAmount3 * item.amount3 + item.amount * selectedAmount2 + item.taxes)}}</span></li>
+			</ul>
+			<p id="demo" class="promo" onclick="myFunction()">
+            	<a href="#">Have a promo code?</a>
+            </p>
+            <span class="promo-input" *ngIf="vipAlumni.dirty || book.dirty">
+                <input type="text" name="" placeholder="Promo Code"> <button type="button">Apply</button>
+            </span>
+		</div>
+	</div>
+</section>
+
+<a routerLink="/second">
+	<button type="button" 
+	class="checkout">Checkout</button>
+</a>
+
+
+</form>
