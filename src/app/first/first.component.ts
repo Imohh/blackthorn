@@ -12,21 +12,21 @@ export class FirstComponent implements OnInit {
     this.selectedAmount = event.target.value;
   }
 
-  //VIP lumni ticket
+  //VIP Alumni ticket
   selectedAmount2: any = '';
 
   changeHandler2 (event: any) {
     this.selectedAmount2 = event.target.value;
   }
 
-  //VIP Donation
+  // Book
   selectedAmount3: any = '';
 
   changeHandler3 (event: any) {
     this.selectedAmount3 = event.target.value;
   }
 
-  //VIP Donation
+  // Donation
   selectedAmount4: any = '';
 
   changeHandler4 (event: any) {
@@ -38,7 +38,8 @@ export class FirstComponent implements OnInit {
       "title": "hey there",
       "amount": 3500,
       "amount3": 17.99,
-      "taxes": 289.42
+      "taxes": 289.42,
+      "donation": [50,100,200,500]
     }
   ];
 

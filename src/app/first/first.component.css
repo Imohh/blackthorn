@@ -1,3 +1,12 @@
+@import url(//db.onlinewebfonts.com/c/0fadaa21fcac88ceee0bb8da992c221b?family=SalesforceSans-Regular);
+body {
+    font-family:'SalesforceSans-Regular';
+}
+
+p, span, h1, h4, li, span, input, button, select {
+    font-family:'SalesforceSans-Regular';
+}
+
 @media (min-width: 1196px) {
     
 
@@ -8,7 +17,6 @@
 .inner-container {
     background:  #fff;
     padding:  50px;
-
 }
 
 .in-container {
@@ -70,7 +78,7 @@ hr {
     width: 54px;
 }
 
-.form-container input {
+/* .form-container input {
     height: 32px;
     left: 212px;
     right: 1174px;
@@ -80,6 +88,26 @@ hr {
     box-sizing: border-box;
     border-radius: 0 4px 4px 0;
     width: 12%;
+} */
+
+.form-container .donate {
+    height: 32px;
+    left: 212px;
+    right: 1174px;
+    top: 682px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 0 4px 4px 0;
+    width: 12%;
+}
+
+.donate-input input {
+    margin-right: 1%;
+    height: 32px;
+    left: 212px;
+    right: 1174px;
+    top: 682px
 }
 
 label {
@@ -150,6 +178,7 @@ margin-right: 10px;
 
 .top-bar p {
 width: 20%;
+font-family: 'SalesforceSans-Regular'
 }
 
 .top-bar a{
@@ -169,13 +198,14 @@ color:  #000;
 
 .alert-down {
     padding: 1px;
-    background: #e6d7d7;
+    background: #E1DACF4F;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
 .alert-down p {
-    padding-left: 20px
+    padding-left: 20px;
+    font-size: 13px
 }
 
 .contain button {
@@ -201,7 +231,7 @@ color:  #000;
 }
 
 .vip-text {
-    width: 10%;
+    width: 7%;
     float: left;
     margin: 0;
     margin-top: 1%;
@@ -403,13 +433,14 @@ color:  #000;
     
     .alert-down {
         padding: 1px;
-        background: #e6d7d7;
+        background: #E1DACF4F;
         border-radius: 5px;
         margin-bottom: 20px;
     }
     
     .alert-down p {
-        padding-left: 20px
+        padding-left: 20px;
+        font-size: 13px
     }
     
     .contain button {
@@ -614,13 +645,14 @@ color:  #000;
     
     .alert-down {
         padding: 1px;
-        background: #e6d7d7;
+        background: #E1DACF4F;
         border-radius: 5px;
         margin-bottom: 20px;
     }
     
     .alert-down p {
-        padding-left: 20px
+        padding-left: 20px;
+        font-size: 13px
     }
     
     .contain button {
