@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-first',
@@ -45,13 +46,20 @@ export class FirstComponent implements OnInit {
 
   total = this.posts.amount2;
 
-  
 
   
+
+
 
   constructor() {}
 
   ngOnInit(): void {
   }
+
+  clickSub() {
+    console.log(this.exform.value);
+    this.exform.reset();
+  }
+
 
 }

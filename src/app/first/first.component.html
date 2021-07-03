@@ -8,7 +8,7 @@
 <section class="start">
 
 
-<form name="myForm" novalidate>
+<form name="myForm" novalidate formGroup="exform">
 	<section class="in-container" style="float: left;">
 		<div class="form-container form-group">
 			<div class="contain top-contain">
@@ -49,7 +49,9 @@
                     (change)="changeHandler2($event)"
                     ngModel 
                     name="vipAlumni" 
-                    #vipAlumni="ngModel">
+                    #vipAlumni="ngModel"
+					ng-model="new-guy"
+					  >
                         <option value="">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -59,8 +61,11 @@
                 </span>
 			</div>
             <div class="alert-down" *ngIf="vipAlumni.dirty">
-                <p>{{selectedAmount2}} Ticket Added to cart. <a>Cancel</a></p>
+                <p>{{selectedAmount2}} Ticket Added to cart. 
+					<button id="btn-cancel" ng-click="angular.copy(new-guy)" type="reset">Cancel</button></p>
             </div>
+
+			
 			<hr><br>
 		</div>
 
