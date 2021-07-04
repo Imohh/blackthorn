@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-first',
   templateUrl: './first.component.html',
   styleUrls: ['./first.component.css']
 })
-export class FirstComponent implements OnInit {
+export class FirstComponent implements OnInit, OnDestroy {
   selectedAmount: any = '';
 
   changeHandler (event: any) {
@@ -34,6 +34,20 @@ export class FirstComponent implements OnInit {
     this.selectedAmount4 = event.target.value;
   }
 
+  // test
+  selectedAmount5: any = '';
+
+  changeHandler5 (event: any) {
+    this.selectedAmount5 = event.target.value;
+  }
+
+  // test2
+  selectedAmount6: any = '';
+
+  changeHandler6 (event: any) {
+    this.selectedAmount6 = event.target.value;
+  }
+  
   posts: any = [
     {
       "title": "hey there",
@@ -44,22 +58,27 @@ export class FirstComponent implements OnInit {
     }
   ];
 
-  total = this.posts.amount2;
+  total:string = this.posts.amount;
 
 
   
 
 
 
-  constructor() {}
+  constructor(private data:DataService) {}
 
-  ngOnInit(): void {
+  first:any;
+  second:any;
+  third:any;
+
+
+  ngOnInit() {
   }
 
-  clickSub() {
-    console.log(this.exform.value);
-    this.exform.reset();
+  
+  ngOnDestroy() {
+    this.data.first = this.first;
+    this.data.third = this.third;
   }
-
 
 }

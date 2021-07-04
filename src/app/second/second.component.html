@@ -5,6 +5,14 @@
 </div>
 
 
+<input type="text" name="second" 
+ngModel 
+    name="second" 
+    #second="ngModel"/>
+<h1 *ngFor="let item of posts">{{(first * item.amount)}}</h1>
+<h1>{{third}}</h1>
+
+
 <div class="start">
 	<div class="top-ul">
 		<label class="label1"><input type="radio" name="tickets">Tickets</label>
@@ -30,12 +38,12 @@
 
 			<ul>
 				<li>1x Free Ticket <span>$0.00</span></li>
-				<li>2 Alumni VIP Ticket <span>$3,500.00</span></li>
+				<li *ngFor="let item of posts">{{first}} Alumni VIP Ticket <span>${{(first * item.amount)}}</span></li>
 			</ul>
 			<p><a href="">Edit</a></p>
 			<hr>
 			<ul>
-				<li>subtotal <span>$7,000.00</span></li>
+				<li *ngFor="let item of posts">subtotal <span>${{(first * item.amount + item.amount * selectedAmount2)}}</span></li>
 				<li>Taxes <span>$289.42</span></li>
 			</ul>
 			<hr>

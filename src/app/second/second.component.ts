@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirstComponent } from '../first/first.component';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-second',
@@ -50,11 +51,17 @@ export class SecondComponent implements OnInit {
 
   ImagePath: string;
 
-  constructor() {
+  constructor(private data:DataService) {
     this.ImagePath = '../../assets/img/Vector.png';
   }
 
+  first:any;
+  second:any;
+  third:any;
+
   ngOnInit() {
+    this.first = this.data.first;
+    this.third = this.data.third;
   }
 
 }

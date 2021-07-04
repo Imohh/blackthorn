@@ -8,6 +8,45 @@
 <section class="start">
 
 
+<!-- <input type="text" name="first"
+[(ngModel)]="first"/> -->
+
+<select 
+	name="first"
+	[(ngModel)]="first"
+	(change)="changeHandler5($event)" >
+	
+    <option value="">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+</select>
+
+<select 
+	name="third"
+	ngModel 
+    name="third" 
+    #third="ngModel"
+	(change)="changeHandler6($event)">
+    <option value="">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+</select>
+
+
+
+<span *ngIf="third.dirty">
+	<h1 *ngFor="let item of posts">{{(selectedAmount6)}}</h1>
+</span>
+
+<span *ngIf="first">
+	<h1 *ngFor="let item of posts">{{(selectedAmount5)}}</h1>
+</span>
+
+
+
+
+
+
 <form name="myForm" novalidate formGroup="exform">
 	<section class="in-container" style="float: left;">
 		<div class="form-container form-group">
@@ -46,11 +85,9 @@
                 </span>
 				<span>
                     <select 
-                    (change)="changeHandler2($event)"
-                    ngModel 
-                    name="vipAlumni" 
-                    #vipAlumni="ngModel"
-					ng-model="new-guy"
+                    name="first"
+					[(ngModel)]="first"
+					(change)="changeHandler2($event)" 
 					  >
                         <option value="">0</option>
                         <option value="1">1</option>
@@ -60,12 +97,10 @@
 				    </select>
                 </span>
 			</div>
-            <div class="alert-down" *ngIf="vipAlumni.dirty">
+            <div class="alert-down" *ngIf="first">
                 <p>{{selectedAmount2}} Ticket Added to cart. 
-					<button id="btn-cancel" ng-click="angular.copy(new-guy)" type="reset">Cancel</button></p>
+					<button id="btn-cancel" ng-click="angular.copy(first)" type="reset">Cancel</button></p>
             </div>
-
-			
 			<hr><br>
 		</div>
 
@@ -121,7 +156,7 @@
 			<ul>
 				<li *ngIf="freeTicket.dirty">{{selectedAmount}}x Free Ticket <span>$0.00</span></li>
 				<span *ngFor="let item of posts">
-                    <li *ngIf="vipAlumni.dirty">{{selectedAmount2}} Alumni VIP Ticket <span>${{(selectedAmount2 * item.amount)}}</span></li>
+                    <li *ngIf="first">{{selectedAmount2}} Alumni VIP Ticket <span>${{(selectedAmount2 * item.amount)}}</span></li>
                 </span>
             </ul>
             <ul>
@@ -150,14 +185,14 @@
 			<p id="demo" class="promo" onclick="myFunction()">
             	<a href="#">Have a promo code?</a>
             </p>
-            <span class="promo-input" *ngIf="vipAlumni.dirty || book.dirty">
+            <span class="promo-input" *ngIf="book.dirty">
                 <input type="text" name="" placeholder="Promo Code"> <button type="button">Apply</button>
             </span>
 		</div>
 	</div>
 </section>
 
-<a routerLink="/second">
+<a rouerLinkActive="active" [routerLink]="['/second']">
 	<button type="button" 
 	class="checkout">Checkout</button>
 </a>

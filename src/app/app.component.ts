@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hello-world';
+
+  ngOnInit() {
+
+  }
+
+  first:any="stockol";
+  second:any="Malmo";
+
 }
