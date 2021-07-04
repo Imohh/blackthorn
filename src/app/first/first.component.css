@@ -7,6 +7,10 @@ p, span, h1, h4, li, span, input, button, select {
     font-family:'SalesforceSans-Regular';
 }
 
+.total {
+    font-weight: 900
+}
+
 @media (min-width: 1196px) {
     
 
@@ -374,15 +378,15 @@ padding: 30px;
     }
     
     .checkout {
-    margin-top: 20px;
-    border: none;
-    width: 55%;
-    border-radius: 5px;
-    padding:  15px 20px;
-    background:  #0EB58A;
-    color:  #fff;
-    cursor:  pointer;
-    margin-bottom: 10%
+        margin-top: 20px;
+        border: none;
+        width: 55%;
+        border-radius: 5px;
+        padding:  15px 20px;
+        background:  #0EB58A;
+        color:  #fff;
+        cursor:  pointer;
+        margin-bottom: 10%
     }
 
     .contain .donate {
@@ -587,15 +591,15 @@ padding: 30px;
     }
     
     .checkout {
-    margin-top: 20px;
-    border: none;
-    width: 30%;
-    border-radius: 5px;
-    padding:  15px 20px;
-    background:  #0EB58A;
-    color:  #fff;
-    cursor:  pointer;
-    margin-bottom: 10%
+        margin-top: 20px;
+        border: none;
+        width: 30%;
+        border-radius: 5px;
+        padding:  15px 20px;
+        background:  #0EB58A;
+        color:  #fff;
+        cursor:  pointer;
+        margin-bottom: 10%
     }
 
     .contain .donate {

@@ -34,7 +34,7 @@ export class FirstComponent implements OnInit, OnDestroy {
     this.selectedAmount4 = event.target.value;
   }
 
-  // test
+  // Base Ticket
   selectedAmount5: any = '';
 
   changeHandler5 (event: any) {
@@ -53,6 +53,7 @@ export class FirstComponent implements OnInit, OnDestroy {
       "title": "hey there",
       "amount": 3500,
       "amount3": 17.99,
+      "amount4": 95.99,
       "taxes": 289.42,
       "donation": [50,100,200,500]
     }
@@ -70,15 +71,26 @@ export class FirstComponent implements OnInit, OnDestroy {
   first:any;
   second:any;
   third:any;
+  forth:any;
+  fifth:any;
+  test:any;
+
+  isDisplay = false;
+  toggleDisplay() {
+    this.isDisplay = !this.isDisplay;
+  }
 
 
   ngOnInit() {
   }
 
+
   
   ngOnDestroy() {
     this.data.first = this.first;
     this.data.third = this.third;
+    this.data.forth = this.forth;
+    this.data.fifth = this.fifth;
   }
 
 }

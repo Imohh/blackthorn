@@ -1,7 +1,7 @@
 
 <div class="top-bar">
 	<a href="#"><img src="../../assets/img/icon.png">
-	<p>Alumni Weekend</p></a>
+	<p>CU - Alumni Weekend</p></a>
 </div>
 
 
@@ -11,7 +11,7 @@
 <!-- <input type="text" name="first"
 [(ngModel)]="first"/> -->
 
-<select 
+<!-- <select 
 	name="first"
 	[(ngModel)]="first"
 	(change)="changeHandler5($event)" >
@@ -22,10 +22,8 @@
 </select>
 
 <select 
-	name="third"
-	ngModel 
-    name="third" 
-    #third="ngModel"
+name="third"
+[(ngModel)]="third"
 	(change)="changeHandler6($event)">
     <option value="">0</option>
 	<option value="1">1</option>
@@ -34,13 +32,13 @@
 
 
 
-<span *ngIf="third.dirty">
-	<h1 *ngFor="let item of posts">{{(selectedAmount6)}}</h1>
+<span *ngIf="third">
+	<h1 *ngFor="let item of posts">six{{(selectedAmount6)}}</h1>
 </span>
 
 <span *ngIf="first">
-	<h1 *ngFor="let item of posts">{{(selectedAmount5)}}</h1>
-</span>
+	<h1 *ngFor="let item of posts">five{{(selectedAmount5)}}</h1>
+</span> -->
 
 
 
@@ -53,22 +51,47 @@
 			<div class="contain top-contain">
 				<h1>Free Ticket</h1>
 				<p>Free ticket for anyone to make a valuable contribution towards our future online events programme. Thank you.</p>
-				<p class="sales-red" *ngIf="!freeTicket.dirty">Sales end in 1 hour</p>
+				<p class="sales-red" *ngIf="!forth">Sales end in 1 hour</p>
 
 				<p class="free-p" style="float: left;margin: 0;margin-top: 1%">Free</p>
 				<select 
                 (change)="changeHandler($event)" 
-                ngModel 
-                name="freeTicket" 
-                #freeTicket="ngModel"
+                name="forth"
+				[(ngModel)]="forth"
                 >
                     <option value="">0</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 				</select>
 			</div>
-            <div class="alert-down" *ngIf="freeTicket.dirty">
-                <p>Only 2 tickets available. join waitlist</p>
+            <div class="alert-down" *ngIf="forth">
+                <p>Only 2 tickets available. <span>
+					<button id="btn-cancel" (click) = "toggleDisplay()" type="reset">join waitlist</button></span></p>
+            </div>
+			<hr><br>
+		</div>
+
+		<div class="form-container form-group" *ngIf = "isDisplay" >
+			<div class="contain top-contain">
+				<h1>Alumni Base Ticket</h1>
+				<p>This livestream will broadcast via a private YouTube link that will be sent to ticket purchasers an hour prior to showtime.</p>
+				<p class="sales-ccc">Sales end in 5 days</p>
+
+				<span *ngFor="let item of posts">
+                    <p class="vip-text">${{item.amount4}}</p>
+                </span>
+				<select 
+                (change)="changeHandler5($event)" 
+                name="fifth"
+				[(ngModel)]="fifth"
+                >
+                    <option value="">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+				</select>
+			</div>
+            <div class="alert-down" *ngIf="fifth">
+                <p>1 Ticket Added to cart. Want to join the waitlist for 2 tickets? <span>join waitlist</span></p>
             </div>
 			<hr><br>
 		</div>
@@ -81,7 +104,6 @@
 
                 <span *ngFor="let item of posts">
                     <p class="vip-text">${{item.amount}}</p>
-                    
                 </span>
 				<span>
                     <select 
@@ -131,10 +153,9 @@
                 </span>
 				<span>
                     <select 
-                    (change)="changeHandler3($event)"
-                    ngModel 
-                    name="book" 
-                    #book="ngModel">
+                    name="third"
+					[(ngModel)]="third"
+					(change)="changeHandler3($event)">
                         <option value="">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -154,19 +175,22 @@
 		<div>
 			<h1>Order Summary</h1>
 			<ul>
-				<li *ngIf="freeTicket.dirty">{{selectedAmount}}x Free Ticket <span>$0.00</span></li>
+				<li *ngIf="forth">{{selectedAmount}}x Free Ticket <span>$0.00</span></li>
 				<span *ngFor="let item of posts">
                     <li *ngIf="first">{{selectedAmount2}} Alumni VIP Ticket <span>${{(selectedAmount2 * item.amount)}}</span></li>
                 </span>
-            </ul>
-            <ul>
 				<span *ngFor="let item of posts">
-                    <li>Donation <span>${{(selectedAmount4)}}</span></li>
+                    <li class="base-ticket" *ngIf="fifth">{{selectedAmount5}} Alumni Base Ticket <span>${{(selectedAmount5 * item.amount4)}}</span></li>
                 </span>
             </ul>
             <ul>
 				<span *ngFor="let item of posts">
-                    <li *ngIf="book.dirty">{{selectedAmount3}} Book: Good Strategy... <span>${{(selectedAmount3 * item.amount3)}}</span></li>
+                    <!-- <li>Donation <span>${{(selectedAmount4)}}</span></li> -->
+                </span>
+            </ul>
+            <ul>
+				<span *ngFor="let item of posts">
+                    <li *ngIf="third">{{selectedAmount3}} Book: Good Strategy... <span>${{(selectedAmount3 * item.amount3)}}</span></li>
                 </span>
             </ul>
 			<hr>
@@ -185,7 +209,7 @@
 			<p id="demo" class="promo" onclick="myFunction()">
             	<a href="#">Have a promo code?</a>
             </p>
-            <span class="promo-input" *ngIf="book.dirty">
+            <span class="promo-input">
                 <input type="text" name="" placeholder="Promo Code"> <button type="button">Apply</button>
             </span>
 		</div>

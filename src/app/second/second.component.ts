@@ -36,11 +36,19 @@ export class SecondComponent implements OnInit {
     this.selectedAmount4 = event.target.value;
   }
 
+  // Base Ticket
+  selectedAmount5: any = '';
+
+  changeHandler5 (event: any) {
+    this.selectedAmount5 = event.target.value;
+  }
+
   posts: any = [
     {
       "title": "hey there",
       "amount": 3500,
       "amount3": 17.99,
+      "amount4": 95.99,
       "taxes": 289.42,
       "donation": [50,100,200,500]
     }
@@ -58,10 +66,14 @@ export class SecondComponent implements OnInit {
   first:any;
   second:any;
   third:any;
+  forth:any;
+  fifth:any;
 
   ngOnInit() {
     this.first = this.data.first;
     this.third = this.data.third;
+    this.forth = this.data.forth;
+    this.fifth = this.data.fifth;
   }
 
 }

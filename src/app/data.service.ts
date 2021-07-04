@@ -7,4 +7,6 @@ export class DataService {
   first:any;
   second:any;
   third:any;
+  forth:any;
+  fifth:any;
 }
