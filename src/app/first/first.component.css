@@ -187,7 +187,7 @@ padding: 30px;
 }
 
 .top-bar p {
-    width: 20%;
+    width: 40%;
     font-family: 'SalesforceSans-Regular'
 }
 
@@ -436,7 +436,7 @@ padding: 30px;
         font-size: 12px;
     }
 
-    .containers .base-ticket {
+    .containers ul .base-ticket {
         color: #c3bfbf;
         background: red
     }
