@@ -78,7 +78,7 @@ name="third"
 				<p class="sales-ccc">Sales end in 5 days</p>
 
 				<span *ngFor="let item of posts">
-                    <p class="vip-text">${{item.amount4}}</p>
+                    <p class="vip-text" style="width: 8%;">${{item.amount4}}</p>
                 </span>
 				<select 
                 (change)="changeHandler5($event)" 
@@ -119,9 +119,9 @@ name="third"
 				    </select>
                 </span>
 			</div>
-            <div class="alert-down" *ngIf="isDisplay">
+            <div class="alert-down" *ngIf="isDisplay || fifth">
                 <p>2 Tickets waitlisted. 
-					<button id="btn-cancel" ng-click="angular.copy(first)" type="reset">Cancel</button></p>
+					<a id="btn-cancel" (click) = "toggleDisplay()" type="reset">Cancel</a></p>
             </div>
 			<hr><br>
 		</div>
@@ -149,7 +149,7 @@ name="third"
 				<h4>Book: Good Strategy - Bad Strategy</h4>
 				<p>Learn from the experts of business process management</p>
                 <span *ngFor="let item of posts" class="donate-text">
-                    <p style="width: 7%;float: left;margin: 0;margin-top: 1%">${{item.amount3}}</p>
+                    <p style="width: 8%;float: left;margin: 0;margin-top: 1%">${{item.amount3}}</p>
                 </span>
 				<span>
                     <select 
@@ -183,7 +183,7 @@ name="third"
                     <li *ngIf="fifth">{{selectedAmount5}}x Alumni Base Ticket <span>${{(selectedAmount5 * item.amount4)}}</span></li>
                 </span>
 				<span *ngFor="let item of posts">
-                    <li class="base-ticket" *ngIf="isDisplay">2x Alumni Base Ticket waitlisted<span>${{(item.amount2)}}</span></li>
+                    <li style="color: #ccc" class="base-ticket" *ngIf="isDisplay">2x Alumni Base Ticket waitlisted<span>${{(item.amount2)}}</span></li>
                 </span>
             </ul>
             <ul>

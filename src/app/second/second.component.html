@@ -39,12 +39,12 @@
 			<ul>
 				<li *ngIf="forth">{{forth}}x Free Ticket <span>$0.00</span></li>
 				<span *ngFor="let item of posts">
-					<li *ngIf="first">{{first}} Alumni VIP Ticket <span>${{(first * item.amount)}}</span></li>
+					<li *ngIf="first">{{first}}x Alumni VIP Ticket <span>${{(first * item.amount)}}</span></li>
 				</span><span *ngFor="let item of posts">
-					<li *ngIf="first">{{fifth}} Alumni Base Ticket waitlisted <span>${{(fifth * item.amount4)}}</span></li>
+					<li *ngIf="first">{{fifth}}x Alumni Base Ticket waitlisted <span>${{(fifth * item.amount4)}}</span></li>
 				</span>
 				<span *ngFor="let item of posts">
-					<li *ngIf="third">{{third}} Book: Good Strategy... <span>${{(third * item.amount3)}}</span></li>
+					<li *ngIf="third">{{third}}x Book: Good Strategy... <span>${{(third * item.amount3)}}</span></li>
 				</span>
 			</ul>
 			<p><a href="">Edit</a></p>
@@ -73,7 +73,7 @@
 
 
 
-<form>
+<form novalidate #userForm="ngForm" name="myform" action="#">
 	<section class="accordion" style="position: relative;overflow: hidden;float: left; ">
 		<input type="checkbox" name="collapse" id="handle1" checked="checked">
 		<h2 class="handle">
@@ -87,12 +87,13 @@
 		<div class="content">
 			<h1 class="header-h1">Attendee 1 - Free Ticket</h1>
 				
-				<input  type="text" 
-				 name="firstName" 
-				 ngModel
-				 #firstName="ngModel"
+				<input type="text" 
+				 name="firstname" 
+				 [(ngModel)]="first.firstname" 
+				 required
 				 placeholder="First Name">
 				<br>
+
 				<input type="text" name="lastname" placeholder="Last Name">
 				<br>
 				<input class="text" type="text" name="email" placeholder="Email">
@@ -112,7 +113,7 @@
   <div class="content">
     <h1 class="header-h1">Attendeed 2 - Alumni VIP ticket</h1>
 		
-			<input type="text" name="name" placeholder="First Name">
+			<input type="text" name="firstname" placeholder="First Name">
 			<br>
 			<input type="text" name="lastname" placeholder="Last Name">
 			<br>

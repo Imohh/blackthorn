@@ -5,10 +5,9 @@ body {
 }
 
 /*form*/
-input .ng-touched .ng-invalid {
+input[name='firstname'].ng-invalid:not(form).ng-touched {
 	border: 1px solid red;
 }
-
 
 @media (min-width: 1196px) {
 	.back-arrow p a{
@@ -338,6 +337,7 @@ input .ng-touched .ng-invalid {
 
 	.top-bar {
 		width: 70%;
+		cursor: pointer
 	}
 
 	.top-bar img {
