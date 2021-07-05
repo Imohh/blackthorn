@@ -24,7 +24,7 @@ p, span, h1, h4, li, span, input, button, select {
 }
 
 .in-container {
-    width: 70%;
+    width: 60%;
     background:  #fff;
     padding:  15px 50px 20px 30px;
     box-shadow: 00px 2px 6px rgba(0, 0, 0, 0.16);
@@ -145,17 +145,17 @@ padding: 30px;
 }
 
 #btn-cancel {
-    background: transparent;
     color: blue;
     text-decoration: underline;
     cursor: pointer;
     border: none;
+    width: 15%;
 }
 
 .checkout {
     margin-top: 20px;
     border: none;
-    width: 20%;
+    width: 25%;
     border-radius: 5px;
     padding:  15px 20px;
     background:  #0EB58A;
@@ -227,7 +227,7 @@ padding: 30px;
 }
 
 .promo-input input {
-    width: 55%;
+    width: 65%;
     margin-right: 2%
 }
 
@@ -236,7 +236,7 @@ padding: 30px;
 }
 
 .order-summary {
-    width: 20%;
+    width: 25%;
     float: left;
 }
 
@@ -434,6 +434,11 @@ padding: 30px;
     .sales-red {
         color: red;
         font-size: 12px;
+    }
+
+    .containers .base-ticket {
+        color: #c3bfbf;
+        background: red
     }
     
     .sales-ccc {

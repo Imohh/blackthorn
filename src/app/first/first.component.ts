@@ -52,6 +52,7 @@ export class FirstComponent implements OnInit, OnDestroy {
     {
       "title": "hey there",
       "amount": 3500,
+      "amount2": 191.98,
       "amount3": 17.99,
       "amount4": 95.99,
       "taxes": 289.42,

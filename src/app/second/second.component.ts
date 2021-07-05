@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirstComponent } from '../first/first.component';
 import { DataService } from '../data.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-second',
@@ -8,6 +9,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./second.component.css']
 })
 export class SecondComponent implements OnInit {
+
+ 
+
+
+
 
   selectedAmount: any = '';
 
@@ -69,11 +75,14 @@ export class SecondComponent implements OnInit {
   forth:any;
   fifth:any;
 
+
+
   ngOnInit() {
     this.first = this.data.first;
     this.third = this.data.third;
     this.forth = this.data.forth;
     this.fifth = this.data.fifth;
+
   }
 
 }

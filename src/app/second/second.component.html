@@ -13,7 +13,7 @@
 <h1>{{third}}</h1> -->
 
 
-<div class="start">
+
 	<div class="top-ul">
 		<label class="label1"><input type="radio" name="tickets">Tickets</label>
 		<label class="label2"><input type="radio" name="tickets">Sessions</label>
@@ -73,29 +73,29 @@
 
 
 
+<form>
+	<section class="accordion" style="position: relative;overflow: hidden;float: left; ">
+		<input type="checkbox" name="collapse" id="handle1" checked="checked">
+		<h2 class="handle">
+			<label for="handle1">
+				<img src="../../assets/img/Icons.png" style="float: right; padding-right: 2%;">
+			</label>
+		</h2>
 
-<section class="accordion" style="position: relative;overflow: hidden;float: left; ">
-  <input type="checkbox" name="collapse" id="handle1" checked="checked">
-  <h2 class="handle">
-    <label for="handle1">
-        <img src="../../assets/img/Icons.png" style="float: right; padding-right: 2%;">
-    </label>
-  </h2>
-  <div class="content">
-    <h1 class="header-h1">Attendee 1 - Free Ticket</h1>
-		<form>
-			<input type="text" name="firstname" placeholder="First Name">
-			<br>
-			<input type="text" name="lastname" placeholder="Last Name">
-			<br>
-			<input type="text" name="email" placeholder="Email">
-			<br>
-			<p class="would">would you like to receive the branded connections and other e-communications from the US?</p><br>
-			<input type="radio" value="yes" name="yes"><span>Yes</span><br>
-			<input type="radio" value="no" name="yes"><span>No</span>
-		</form>
-  </div>
-</section>
+
+ 
+		<div class="content">
+			<h1 class="header-h1">Attendee 1 - Free Ticket</h1>
+				
+				<input  type="text" formControlName="firstname" placeholder="First Name"><br>
+				<input type="text" formControlName="lastname" placeholder="Last Name"><br>
+				<input class="text" type="text" formControlName="email" placeholder="Email"><br>
+				<p class="would">would you like to receive the branded connections and other e-communications from the US?</p><br>
+				<input type="radio" value="yes" name="question"><span>Yes</span><br>
+				<input type="radio" value="no" name="question"><span>No</span>
+				
+		</div>
+	</section>
 <section class="accordion" style="position: relative;overflow: hidden;">
   <input type="checkbox" name="collapse2" id="handle2">
   <h2 class="handle">
@@ -104,19 +104,19 @@
   </h2>
   <div class="content">
     <h1 class="header-h1">Attendeed 2 - Alumni VIP ticket</h1>
-		<form>
-			<input type="text" name="firstname" placeholder="First Name">
+		
+			<input type="text" formControlName="name" placeholder="First Name">
 			<br>
-			<input type="text" name="lastname" placeholder="Last Name">
+			<input type="text" formControlName="lastname" placeholder="Last Name">
 			<br>
-			<input type="text" name="email" placeholder="Email">
+			<input class="text" type="text" formControlName="email" placeholder="Email">
 			<br>
-			<input type="text" name="jobtitle" placeholder="Job Title">
+			<input class="text" type="text" formControlName="jobtitle" placeholder="Job Title">
 			<br>
-			<input type="text" name="company" placeholder="Company">
+			<input class="text" type="text" formControlName="company" placeholder="Company">
 			<br>
-			<input type="text" name="country" placeholder="Country">
-		</form>
+			<input class="text" type="text" formControlName="country" placeholder="Country">
+		
   </div>
 </section>
 <section class="accordion" style="float: left;position: relative;overflow: hidden;">
@@ -127,19 +127,19 @@
   </h2>
   <div class="content">
     <h1 class="header-h1">Attendeed 3 - Alumni VIP ticket</h1>
-		<form>
-			<input type="text" name="firstname" placeholder="First Name">
+		
+			<input type="text" formControlName="firstname" placeholder="First Name">
 			<br>
-			<input type="text" name="lastname" placeholder="Last Name">
+			<input type="text" formControlName="lastname" placeholder="Last Name">
 			<br>
-			<input type="text" name="email" placeholder="Email">
+			<input class="text" formControlName="text" name="email" placeholder="Email">
 			<br>
-			<input type="text" name="jobtitle" placeholder="Job Title">
+			<input class="text" formControlName="text" name="jobtitle" placeholder="Job Title">
 			<br>
-			<input type="text" name="company" placeholder="Company">
+			<input class="text" formControlName="text" name="company" placeholder="Company">
 			<br>
-			<input type="text" name="country" placeholder="Country">
-		</form>
+			<input class="text" formControlName="text" name="country" placeholder="Country">
+		
 	</div>
 </section>
-</div>
+</form>

@@ -39,7 +39,7 @@ body {
 		box-shadow: 00px 2px 6px rgba(0, 0, 0, 0.16);
 	}
 
-	.content input[type="text"] {
+	.content .text {
 		border:  1px solid #C4C4C4;
 		padding:  0 0 0 20px;
 
@@ -78,13 +78,29 @@ body {
 	input[name='lastname'] {
 		width: 48%;
 		margin-top: -18px;
+		margin-bottom: 1%;
+		height: 45px;
+		padding-left: 20px;
+		left: 211px;
+		right: 528px;
+		top: 906px;
 		display: block;
+		border:  1px solid #C4C4C4;
+		border-radius: 5px;
 	}
 
 	input[name='firstname'] {
-		width: 48%;
+		width: 49%;
+		height: 45px;
+		left: 211px;
+		right: 528px;
+		top: 906px;
 		float: left;
+		padding-left: 20px;
 		margin-right:17px;
+		margin-bottom: 1%;
+		border:  1px solid #C4C4C4;
+		border-radius: 5px;
 	}
 
 	form {

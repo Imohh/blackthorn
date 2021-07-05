@@ -66,7 +66,7 @@ name="third"
 			</div>
             <div class="alert-down" *ngIf="forth">
                 <p>Only 2 tickets available. <span>
-					<button id="btn-cancel" (click) = "toggleDisplay()" type="reset">join waitlist</button></span></p>
+					<a id="btn-cancel" (click) = "toggleDisplay()" type="reset">join waitlist</a></span></p>
             </div>
 			<hr><br>
 		</div>
@@ -119,8 +119,8 @@ name="third"
 				    </select>
                 </span>
 			</div>
-            <div class="alert-down" *ngIf="first">
-                <p>{{selectedAmount2}} Ticket Added to cart. 
+            <div class="alert-down" *ngIf="isDisplay">
+                <p>2 Tickets waitlisted. 
 					<button id="btn-cancel" ng-click="angular.copy(first)" type="reset">Cancel</button></p>
             </div>
 			<hr><br>
@@ -177,10 +177,13 @@ name="third"
 			<ul>
 				<li *ngIf="forth">{{selectedAmount}}x Free Ticket <span>$0.00</span></li>
 				<span *ngFor="let item of posts">
-                    <li *ngIf="first">{{selectedAmount2}} Alumni VIP Ticket <span>${{(selectedAmount2 * item.amount)}}</span></li>
+                    <li *ngIf="first">{{selectedAmount2}}x Alumni VIP Ticket <span>${{(selectedAmount2 * item.amount)}}</span></li>
                 </span>
 				<span *ngFor="let item of posts">
-                    <li class="base-ticket" *ngIf="fifth">{{selectedAmount5}} Alumni Base Ticket <span>${{(selectedAmount5 * item.amount4)}}</span></li>
+                    <li *ngIf="fifth">{{selectedAmount5}}x Alumni Base Ticket <span>${{(selectedAmount5 * item.amount4)}}</span></li>
+                </span>
+				<span *ngFor="let item of posts">
+                    <li class="base-ticket" *ngIf="isDisplay">2x Alumni Base Ticket waitlisted<span>${{(item.amount2)}}</span></li>
                 </span>
             </ul>
             <ul>
