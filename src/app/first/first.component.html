@@ -131,14 +131,27 @@ name="third"
 				<h1>Donate</h1>
 				<p>Access to arts is vital. Pay what you can.</p>
 				<p>I want to donate</p>
-                <span (change)="changeHandler4($event)" class="donate-input">
-					<input type="button" value="$50" width="10px"/>
-					<input type="button" value="$100" width="10px"/>
-					<input type="button" value="$200" width="10px"/>
-					<input type="button" value="$500" width="10px"/>
+                <span class="donate-input">
+					<input 
+					(click)="myFunc($event)" 
+					type="button" 
+					value="50" 
+					width="10px"/>
+					<input type="button" 
+					(click)="myFunc($event)" 
+					value="100" 
+					width="10px"/>
+					<input type="button" 
+					(click)="myFunc($event)" 
+					value="200" 
+					width="10px"/>
+					<input type="button" 
+					(click)="myFunc($event)" 
+					value="500" 
+					width="10px"/>
                 </span>
 				<label>$</label>
-				<input class="donate" type="text" name="input" placeholder="Enter amount">
+				<input class="donate" (click)="myFunc($event)" type="text" name="input" placeholder="Enter amount">
 			</div>
 			<hr>
 		</div>
@@ -188,7 +201,7 @@ name="third"
             </ul>
             <ul>
 				<span *ngFor="let item of posts">
-                    <!-- <li>Donation <span>${{(selectedAmount4)}}</span></li> -->
+                    <li>Donation <span>${{selectedInput}}</span></li>
                 </span>
             </ul>
             <ul>

@@ -74,6 +74,7 @@ export class SecondComponent implements OnInit {
   third:any;
   forth:any;
   fifth:any;
+  sixth:any;
 
 
 
@@ -82,6 +83,7 @@ export class SecondComponent implements OnInit {
     this.third = this.data.third;
     this.forth = this.data.forth;
     this.fifth = this.data.fifth;
+    this.sixth = this.data.sixth;
 
   }
 

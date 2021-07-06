@@ -74,6 +74,7 @@ export class FirstComponent implements OnInit, OnDestroy {
   third:any;
   forth:any;
   fifth:any;
+  sixth:any;
   test:any;
 
   isDisplay = false;
@@ -90,6 +91,16 @@ export class FirstComponent implements OnInit, OnDestroy {
   ngOnInit() {
   }
 
+  selectedInput: any = '';
+  myFunc(event: any) {
+    this.selectedInput = event.target.value;
+  }
+
+  // selectedAmount5: any = '';
+
+  // changeHandler5 (event: any) {
+  //   this.selectedAmount5 = event.target.value;
+  // }
 
   
   ngOnDestroy() {
@@ -97,6 +108,7 @@ export class FirstComponent implements OnInit, OnDestroy {
     this.data.third = this.third;
     this.data.forth = this.forth;
     this.data.fifth = this.fifth;
+    this.data.sixth = this.sixth;
   }
 
 }

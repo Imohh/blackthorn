@@ -9,4 +9,5 @@ export class DataService {
   third:any;
   forth:any;
   fifth:any;
+  sixth:any;
 }
