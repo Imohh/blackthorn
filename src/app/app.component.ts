@@ -6,13 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hello-world';
+  title = 'Blackthorn Entry Assessment';
 
   ngOnInit() {
 
   }
 
-  first:any="stockol";
-  second:any="Malmo";
 
 }

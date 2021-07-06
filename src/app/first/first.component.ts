@@ -81,6 +81,11 @@ export class FirstComponent implements OnInit, OnDestroy {
     this.isDisplay = !this.isDisplay;
   }
 
+  isDisplays = false;
+  toggleDisplays() {
+    this.isDisplays = !this.isDisplays;
+  }
+
 
   ngOnInit() {
   }

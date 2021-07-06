@@ -13,15 +13,16 @@
 <h1>{{third}}</h1> -->
 
 
-
-	<div class="top-ul">
-		<label class="label1"><input type="radio" name="tickets">Tickets</label>
-		<label class="label2"><input type="radio" name="tickets">Sessions</label>
-		<label class="label3"><input type="radio" name="tickets">Payment</label>
-	</div>
+<section class="newg">
+	
 
 
 <div class="container">
+	<div class="custom-stepper" style="margin-bottom: 50px">
+        <span aria-label="Tickets" class="custom-step active"> </span>
+        <span aria-label="Sessions" class="custom-step"> </span>
+        <span style="float: right;" aria-label="Payments" class="custom-step"> </span>
+      </div>
 	<div class="in-container">
 		<h1>Tickets</h1>
 		<img class="" [src]="ImagePath" height="50px" width="50px" style="float: left;margin-right: 20px;">
@@ -37,21 +38,24 @@
 			<h1>Order Summary</h1>
 
 			<ul>
-				<li *ngIf="forth">{{forth}}x Free Ticket <span>$0.00</span></li>
+				<span *ngFor="let item of posts">
+					<li *ngIf="forth">{{forth}}x Free Ticket <span>$0.00</span></li>
+				</span>
 				<span *ngFor="let item of posts">
 					<li *ngIf="first">{{first}}x Alumni VIP Ticket <span>${{(first * item.amount)}}</span></li>
-				</span><span *ngFor="let item of posts">
-					<li *ngIf="first">{{fifth}}x Alumni Base Ticket waitlisted <span>${{(fifth * item.amount4)}}</span></li>
+				</span>
+				<span *ngFor="let item of posts">
+					<li *ngIf="fifth">{{fifth}}x Alumni Base Ticket waitlisted <span>${{(fifth * item.amount4)}}</span></li>
 				</span>
 				<span *ngFor="let item of posts">
 					<li *ngIf="third">{{third}}x Book: Good Strategy... <span>${{(third * item.amount3)}}</span></li>
 				</span>
 			</ul>
 			<p><a href="">Edit</a></p>
-			<hr *ngIf="first || third">
+			<hr *ngIf="forth || first || third">
 			<ul>
 				<span *ngFor="let item of posts">
-					<li *ngIf="first || third">subtotal <span>${{(first * item.amount + third * item.amount3)}}</span></li>
+					<li *ngIf="first || third">subtotal <span>${{(first * item.amount + third * item.amount3 || third * item.amount3 || item.amount * first)}}</span></li>
 				</span>
 				<span *ngFor="let item of posts">
 					<li *ngIf="first || third">Taxes <span>${{item.taxes}}</span></li>
@@ -59,7 +63,7 @@
 			</ul>
 			<hr>
 			<ul class="total" *ngFor="let item of posts">
-				<li>Total <span *ngIf="first || third">${{(first * item.amount + third * item.amount3 + item.taxes)}}</span></li>
+				<li>Total <span *ngIf="first || third">${{(first * item.amount + third * item.amount3 + item.taxes || third * item.amount3 + item.taxes || item.amount * first + item.taxes)}}</span></li>
 			</ul>
 			<p class="have">Have a promo code?</p>
 			<span class="promo-input">
@@ -94,9 +98,18 @@
 				 placeholder="First Name">
 				<br>
 
-				<input type="text" name="lastname" placeholder="Last Name">
+				<input type="text" 
+					name="lastname"  
+					[(ngModel)]="first.lastname" 
+					required
+					placeholder="Last Name">
 				<br>
-				<input class="text" type="text" name="email" placeholder="Email">
+				<input class="text" 
+				type="text" 
+				name="email" 
+				[(ngModel)]="first.lastname" 
+				required
+				placeholder="Email">
 				<br>
 				<p class="would">would you like to receive the branded connections and other e-communications from the US?</p><br>
 				<input type="radio" value="yes" name="question"><span>Yes</span><br>
@@ -113,17 +126,36 @@
   <div class="content">
     <h1 class="header-h1">Attendeed 2 - Alumni VIP ticket</h1>
 		
-			<input type="text" name="firstname" placeholder="First Name">
+			<input type="text" 
+			name="firsstname" 
+			[(ngModel)]="first.firsstname" 
+			required
+			placeholder="First Name">
 			<br>
-			<input type="text" name="lastname" placeholder="Last Name">
+			<input type="text" name="lasstname" 
+			[(ngModel)]="first.lasstname" 
+			required 
+			placeholder="Last Name">
 			<br>
-			<input class="text" type="text" name="email" placeholder="Email">
+			<input class="text" type="text" 
+			[(ngModel)]="first.emails" 
+			required 
+			name="emails" placeholder="Email">
 			<br>
-			<input class="text" type="text" name="jobtitle" placeholder="Job Title">
+			<input class="text" type="text" 
+			[(ngModel)]="first.jobtitle" 
+			required
+			name="jobtitle" placeholder="Job Title">
 			<br>
-			<input class="text" type="text" name="company" placeholder="Company">
+			<input class="text" type="text" 
+			[(ngModel)]="first.company" 
+			required
+			name="company" placeholder="Company">
 			<br>
-			<input class="text" type="text" name="country" placeholder="Country">
+			<input class="text" type="text" 
+			[(ngModel)]="first.country" 
+			required
+			name="country" placeholder="Country">
 		
   </div>
 </section>
@@ -136,18 +168,37 @@
   <div class="content">
     <h1 class="header-h1">Attendeed 3 - Alumni VIP ticket</h1>
 		
-			<input type="text" name="firstname" placeholder="First Name">
+			<input type="text" 
+			[(ngModel)]="first.firssstname" 
+			required
+			name="firssstname" placeholder="First Name">
 			<br>
-			<input type="text" name="lastname" placeholder="Last Name">
+			<input type="text" 
+			[(ngModel)]="first.lassstname" 
+			required
+			name="lassstname" placeholder="Last Name">
 			<br>
-			<input class="text" name="text" name="email" placeholder="Email">
+			<input 
+			[(ngModel)]="first.emailss" 
+			required
+			class="text" name="text" name="emailss" placeholder="Email">
 			<br>
-			<input class="text" name="text" name="jobtitle" placeholder="Job Title">
+			<input class="text" 
+			[(ngModel)]="first.jobtiitle" 
+			required 
+			name="text" name="jobtiitle" placeholder="Job Title">
 			<br>
-			<input class="text" name="text" name="company" placeholder="Company">
+			<input 
+			[(ngModel)]="first.compaany" 
+			required
+			class="text" name="text" name="compaany" placeholder="Company">
 			<br>
-			<input class="text" name="text" name="country" placeholder="Country">
+			<input class="text" 
+			[(ngModel)]="first.counntry" 
+			required 
+			name="text" name="counntry" placeholder="Country">
 		
 	</div>
 </section>
 </form>
+</section>

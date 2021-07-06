@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirstComponent } from '../first/first.component';
 import { DataService } from '../data.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-second',

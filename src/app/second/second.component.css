@@ -5,11 +5,74 @@ body {
 }
 
 /*form*/
-input[name='firstname'].ng-invalid:not(form).ng-touched {
+input[name='firstname'].ng-invalid.ng-touched {
+	border: 1px solid red;
+}
+input[name='lastname'].ng-invalid.ng-touched {
+	border: 1px solid red;
+}
+
+input[type='text'].ng-invalid.ng-touched {
 	border: 1px solid red;
 }
 
 @media (min-width: 1196px) {
+	.newg {
+		width:85%;
+		margin: 0 auto
+	}
+
+
+.custom-stepper {
+  width: 100%;
+  margin-top: 10%;
+  height: 2px;
+  display: flex;
+  position: relative;
+}
+
+.custom-stepper .custom-step {
+  display: flex;
+  flex: 1;
+  opacity: 0.2;
+  background-color: #0EB58A;
+}
+
+.custom-stepper .custom-step::after {
+  content: attr(aria-label);
+  margin-top: 15px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.custom-stepper .custom-step.active::after {
+  color: #0EB58A;
+}
+.custom-stepper .custom-step.done::after {
+  color: #0EB58A;
+  opacity: 0.4;
+}
+
+.custom-stepper .custom-step.active {
+  opacity: 1 !important;
+  height: inherit;
+  background-color: #0EB58A !important;
+}
+@media (max-width: 767px) {
+  .custom-stepper .custom-step:not(.active)::after {
+    visibility: hidden !important;
+  }
+  .custom-stepper .custom-step.done::after {
+    visibility: hidden !important;
+  }
+}
+
+
+
+
+
+	
+
 	.back-arrow p a{
 		color: #000;
 		text-decoration: none;
@@ -80,7 +143,7 @@ input[name='firstname'].ng-invalid:not(form).ng-touched {
 		background: green;
 	}
 
-	input[name='lastname'] {
+	input[name='lastname'], input[name='lasstname'], input[name='lassstname'] {
 		width: 48%;
 		margin-top: -18px;
 		margin-bottom: 1%;
@@ -94,7 +157,7 @@ input[name='firstname'].ng-invalid:not(form).ng-touched {
 		border-radius: 5px;
 	}
 
-	input[name='firstname'] {
+	input[name='firstname'], input[name='firsstname'], input[name='firssstname'] {
 		width: 49%;
 		height: 45px;
 		left: 211px;
@@ -369,6 +432,7 @@ input[name='firstname'].ng-invalid:not(form).ng-touched {
 
 	.order-summary {
 		float: right;
+		margin-top: 7%;
 		width: 20%;
 		position: relative;
 		margin-right: 8%;
@@ -442,12 +506,17 @@ input[name='firstname'].ng-invalid:not(form).ng-touched {
 		margin-bottom:  20px;
 	}
 
-	input[type="radio"]:checked::after {
+	input[type="radio"]:after {
+		color: green;
 		background: green;
+		border: 2px solid red;
 	}
 
-	input[type="radio"]:checked::before {
+	input[type="radio"] + *::before {
 		background: green;
+		border-color: red;
+		color: yellow
+
 	}
 
 	input[type="radio"]:after {

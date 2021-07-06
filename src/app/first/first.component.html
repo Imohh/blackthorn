@@ -45,7 +45,7 @@ name="third"
 
 
 
-<form name="myForm" novalidate formGroup="exform">
+<form name="myForm" novalidate>
 	<section class="in-container" style="float: left;">
 		<div class="form-container form-group">
 			<div class="contain top-contain">
@@ -55,9 +55,9 @@ name="third"
 
 				<p class="free-p" style="float: left;margin: 0;margin-top: 1%">Free</p>
 				<select 
-                (change)="changeHandler($event)" 
-                name="forth"
-				[(ngModel)]="forth"
+					(change)="changeHandler($event)" 
+					name="forth"
+					[(ngModel)]="forth"
                 >
                     <option value="">0</option>
 					<option value="1">1</option>
@@ -78,7 +78,7 @@ name="third"
 				<p class="sales-ccc">Sales end in 5 days</p>
 
 				<span *ngFor="let item of posts">
-                    <p class="vip-text" style="width: 8%;">${{item.amount4}}</p>
+                    <p class="vip-text" style="width: 10%;">${{item.amount4}}</p>
                 </span>
 				<select 
                 (change)="changeHandler5($event)" 
@@ -103,7 +103,7 @@ name="third"
 				<p class="sales-ccc">Sales end in 5 days</p>
 
                 <span *ngFor="let item of posts">
-                    <p class="vip-text">${{item.amount}}</p>
+                    <p style="width: 10%;" class="vip-text">${{item.amount}}</p>
                 </span>
 				<span>
                     <select 
@@ -119,7 +119,7 @@ name="third"
 				    </select>
                 </span>
 			</div>
-            <div class="alert-down" *ngIf="isDisplay || fifth">
+            <div class="alert-down" *ngIf="isDisplay">
                 <p>2 Tickets waitlisted. 
 					<a id="btn-cancel" (click) = "toggleDisplay()" type="reset">Cancel</a></p>
             </div>
@@ -149,7 +149,7 @@ name="third"
 				<h4>Book: Good Strategy - Bad Strategy</h4>
 				<p>Learn from the experts of business process management</p>
                 <span *ngFor="let item of posts" class="donate-text">
-                    <p style="width: 8%;float: left;margin: 0;margin-top: 1%">${{item.amount3}}</p>
+                    <p style="width: 10%;float: left;margin: 0;margin-top: 1%">${{item.amount3}}</p>
                 </span>
 				<span>
                     <select 
@@ -183,7 +183,7 @@ name="third"
                     <li *ngIf="fifth">{{selectedAmount5}}x Alumni Base Ticket <span>${{(selectedAmount5 * item.amount4)}}</span></li>
                 </span>
 				<span *ngFor="let item of posts">
-                    <li style="color: #ccc" class="base-ticket" *ngIf="isDisplay">2x Alumni Base Ticket waitlisted<span>${{(item.amount2)}}</span></li>
+                    <li style="color: #ccc" class="base-ticket" *ngIf="isDisplay">2x Alumni Base Ticket waitlisted <span>${{(item.amount2)}}</span></li>
                 </span>
             </ul>
             <ul>

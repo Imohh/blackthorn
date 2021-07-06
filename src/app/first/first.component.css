@@ -16,6 +16,8 @@ p, span, h1, h4, li, span, input, button, select {
 
 .start {
     padding:  40px;
+    width: 85%;
+    margin: 0 auto
 }
 
 .inner-container {
@@ -232,7 +234,7 @@ padding: 30px;
 }
 
 .free-p {
-    width: 5%;
+    width: 7%;
 }
 
 .order-summary {
