@@ -1,22 +1,10 @@
-
 <div class="top-bar">
 	<a routerLink="/first"><img src="../../assets/img/icon.png">
 	<p>CU - Alumni weekend</p></a>
 </div>
 
-
-<!-- <input type="text" name="second" 
-	ngModel 
-    name="second" 
-    #second="ngModel"/>
-<h1 *ngFor="let item of posts">{{first}}</h1>
-<h1>{{third}}</h1> -->
-
-
 <section class="newg">
 	
-
-
 <div class="container">
 	<div class="custom-stepper" style="margin-bottom: 50px">
         <span aria-label="Tickets" class="custom-step active"> </span>
@@ -31,39 +19,39 @@
 	</div>
 </div>
 
-
 <section class="order-summary">
 	<div class="containers">
 		<div>
 			<h1>Order Summary</h1>
 
 			<ul>
+					<li *ngIf="first">{{first}}x Free Ticket <span>$0.00</span></li>
 				<span *ngFor="let item of posts">
-					<li *ngIf="forth">{{forth}}x Free Ticket <span>$0.00</span></li>
-				</span>
-				<span *ngFor="let item of posts">
-					<li *ngIf="first">{{first}}x Alumni VIP Ticket <span>${{(first * item.amount)}}</span></li>
+					<li *ngIf="forth">{{forth}}x Alumni VIP Ticket <span>${{(forth * item.amount)}}</span></li>
 				</span>
 				<span *ngFor="let item of posts">
 					<li *ngIf="fifth">{{fifth}}x Alumni Base Ticket waitlisted <span>${{(fifth * item.amount4)}}</span></li>
+				</span>
+				<span *ngFor="let item of posts">
+					<li *ngIf="third">{{test}}x Donation <span>${{(test)}}</span></li>
 				</span>
 				<span *ngFor="let item of posts">
 					<li *ngIf="third">{{third}}x Book: Good Strategy... <span>${{(third * item.amount3)}}</span></li>
 				</span>
 			</ul>
 			<p><a href="">Edit</a></p>
-			<hr *ngIf="forth || first || third">
+			<hr *ngIf="forth || third">
 			<ul>
 				<span *ngFor="let item of posts">
-					<li *ngIf="first || third">subtotal <span>${{(first * item.amount + third * item.amount3 || third * item.amount3 || item.amount * first)}}</span></li>
+					<li *ngIf="forth || third">subtotal <span>${{(forth * item.amount + third * item.amount3 || third * item.amount3 || item.amount * first).toFixed(2)}}</span></li>
 				</span>
 				<span *ngFor="let item of posts">
-					<li *ngIf="first || third">Taxes <span>${{item.taxes}}</span></li>
+					<li *ngIf="forth || third">Taxes <span>${{item.taxes}}</span></li>
 				</span>
 			</ul>
 			<hr>
 			<ul class="total" *ngFor="let item of posts">
-				<li>Total <span *ngIf="first || third">${{(first * item.amount + third * item.amount3 + item.taxes || third * item.amount3 + item.taxes || item.amount * first + item.taxes)}}</span></li>
+				<li>Total <span *ngIf="forth || third">${{(forth * item.amount + third * item.amount3 + item.taxes || third * item.amount3 + item.taxes || item.amount * first + item.taxes).toFixed(2)}}</span></li>
 			</ul>
 			<p class="have">Have a promo code?</p>
 			<span class="promo-input">
@@ -112,8 +100,11 @@
 				placeholder="Email">
 				<br>
 				<p class="would">would you like to receive the branded connections and other e-communications from the US?</p><br>
-				<input type="radio" value="yes" name="question"><span>Yes</span><br>
-				<input type="radio" value="no" name="question"><span>No</span>
+				<input type="radio" value="yes" name="question"><span class="yes">Yes</span><br>
+				<input type="radio" value="no" name="question"><span class="no">No</span>
+
+				
+
 				
 		</div>
 	</section>

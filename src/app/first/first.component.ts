@@ -41,6 +41,12 @@ export class FirstComponent implements OnInit, OnDestroy {
     this.selectedAmount5 = event.target.value;
   }
 
+  selectedInput: any = '';
+
+  myFunc(event: any) {
+    this.selectedInput = event.target.value;
+  }
+
   // test2
   selectedAmount6: any = '';
 
@@ -77,6 +83,10 @@ export class FirstComponent implements OnInit, OnDestroy {
   sixth:any;
   test:any;
 
+  userObject = {
+    name: true
+  }
+
   isDisplay = false;
   toggleDisplay() {
     this.isDisplay = !this.isDisplay;
@@ -91,10 +101,7 @@ export class FirstComponent implements OnInit, OnDestroy {
   ngOnInit() {
   }
 
-  selectedInput: any = '';
-  myFunc(event: any) {
-    this.selectedInput = event.target.value;
-  }
+  
 
   // selectedAmount5: any = '';
 

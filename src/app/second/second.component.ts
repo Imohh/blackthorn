@@ -69,22 +69,23 @@ export class SecondComponent implements OnInit {
     this.ImagePath = '../../assets/img/Vector.png';
   }
 
+  forth:any;
   first:any;
   second:any;
   third:any;
-  forth:any;
   fifth:any;
   sixth:any;
+  test:any;
 
 
 
   ngOnInit() {
+    this.forth = this.data.forth;
     this.first = this.data.first;
     this.third = this.data.third;
-    this.forth = this.data.forth;
     this.fifth = this.data.fifth;
     this.sixth = this.data.sixth;
-
+    this.test = this.data.test;
   }
 
 }

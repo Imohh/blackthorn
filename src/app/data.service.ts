@@ -10,4 +10,5 @@ export class DataService {
   forth:any;
   fifth:any;
   sixth:any;
+  test:any;
 }

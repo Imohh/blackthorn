@@ -8,39 +8,6 @@
 <section class="start">
 
 
-<!-- <input type="text" name="first"
-[(ngModel)]="first"/> -->
-
-<!-- <select 
-	name="first"
-	[(ngModel)]="first"
-	(change)="changeHandler5($event)" >
-	
-    <option value="">0</option>
-	<option value="1">1</option>
-	<option value="2">2</option>
-</select>
-
-<select 
-name="third"
-[(ngModel)]="third"
-	(change)="changeHandler6($event)">
-    <option value="">0</option>
-	<option value="1">1</option>
-	<option value="2">2</option>
-</select>
-
-
-
-<span *ngIf="third">
-	<h1 *ngFor="let item of posts">six{{(selectedAmount6)}}</h1>
-</span>
-
-<span *ngIf="first">
-	<h1 *ngFor="let item of posts">five{{(selectedAmount5)}}</h1>
-</span> -->
-
-
 
 
 
@@ -51,20 +18,20 @@ name="third"
 			<div class="contain top-contain">
 				<h1>Free Ticket</h1>
 				<p>Free ticket for anyone to make a valuable contribution towards our future online events programme. Thank you.</p>
-				<p class="sales-red" *ngIf="!forth">Sales end in 1 hour</p>
+				<p class="sales-red" *ngIf="!first">Sales end in 1 hour</p>
 
 				<p class="free-p" style="float: left;margin: 0;margin-top: 1%">Free</p>
 				<select 
 					(change)="changeHandler($event)" 
-					name="forth"
-					[(ngModel)]="forth"
+					name="first"
+					[(ngModel)]="first"
                 >
                     <option value="">0</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 				</select>
 			</div>
-            <div class="alert-down" *ngIf="forth">
+            <div class="alert-down" *ngIf="first">
                 <p>Only 2 tickets available. <span>
 					<a id="btn-cancel" (click) = "toggleDisplay()" type="reset">join waitlist</a></span></p>
             </div>
@@ -107,9 +74,9 @@ name="third"
                 </span>
 				<span>
                     <select 
-                    name="first"
-					[(ngModel)]="first"
-					(change)="changeHandler2($event)" 
+						name="forth"
+						[(ngModel)]="forth"
+						(change)="changeHandler2($event)" 
 					  >
                         <option value="">0</option>
                         <option value="1">1</option>
@@ -133,22 +100,25 @@ name="third"
 				<p>I want to donate</p>
                 <span class="donate-input">
 					<input 
-					(click)="myFunc($event)" 
-					type="button" 
-					value="50" 
-					width="10px"/>
+						(click)="myFunc($event)" 
+						name="test" 
+						type="button" 
+						value="50" 
+						[(ngModel)]="userObject.name"
+						#userObject.name
+						width="10px"/>
 					<input type="button" 
-					(click)="myFunc($event)" 
-					value="100" 
-					width="10px"/>
+						(click)="myFunc($event)" 
+						value="100" 
+						width="10px"/>
 					<input type="button" 
-					(click)="myFunc($event)" 
-					value="200" 
-					width="10px"/>
+						(click)="myFunc($event)" 
+						value="200" 
+						width="10px"/>
 					<input type="button" 
-					(click)="myFunc($event)" 
-					value="500" 
-					width="10px"/>
+						(click)="myFunc($event)" 
+						value="500" 
+						width="10px"/>
                 </span>
 				<label>$</label>
 				<input class="donate" (click)="myFunc($event)" type="text" name="input" placeholder="Enter amount">
@@ -188,9 +158,9 @@ name="third"
 		<div>
 			<h1>Order Summary</h1>
 			<ul>
-				<li *ngIf="forth">{{selectedAmount}}x Free Ticket <span>$0.00</span></li>
+				<li *ngIf="first">{{selectedAmount}}x Free Ticket <span>$0.00</span></li>
 				<span *ngFor="let item of posts">
-                    <li *ngIf="first">{{selectedAmount2}}x Alumni VIP Ticket <span>${{(selectedAmount2 * item.amount)}}</span></li>
+                    <li *ngIf="forth">{{selectedAmount2}}x Alumni VIP Ticket <span>${{(selectedAmount2 * item.amount)}}</span></li>
                 </span>
 				<span *ngFor="let item of posts">
                     <li *ngIf="fifth">{{selectedAmount5}}x Alumni Base Ticket <span>${{(selectedAmount5 * item.amount4)}}</span></li>
@@ -201,7 +171,7 @@ name="third"
             </ul>
             <ul>
 				<span *ngFor="let item of posts">
-                    <li>Donation <span>${{selectedInput}}</span></li>
+                    <li *ngIf="userObject.name">Donation <span>${{selectedInput}}</span></li>
                 </span>
             </ul>
             <ul>
@@ -212,15 +182,15 @@ name="third"
 			<hr>
 			<ul>
                 <span *ngFor="let item of posts">
-                    <li>subtotal <span>${{(selectedAmount3 * item.amount3 + item.amount * selectedAmount2)}}</span></li>
-                </span>
+                    <li>Subtotal <span>${{(selectedInput / 2 * 2 + selectedAmount3 * item.amount3 + item.amount * selectedAmount2).toFixed(2)}}</span></li>
+				</span>
 				<span *ngFor="let item of posts">
-                    <li *ngIf="selectedAmount2 || selectedAmount3">Taxes <span>${{item.taxes}}</span></li>
+                    <li *ngIf="selectedAmount2 || selectedAmount3 || selectedInput">Taxes <span>${{item.taxes}}</span></li>
                 </span>
 			</ul>
 			<hr>
 			<ul class="total" *ngFor="let item of posts">
-				<li>Total <span *ngIf="selectedAmount2 || selectedAmount3">${{(selectedAmount3 * item.amount3 + item.amount * selectedAmount2 + item.taxes)}}</span></li>
+				<li>Total <span *ngIf="selectedAmount2 || selectedAmount3 || selectedInput">${{(selectedInput / 2 * 2 + selectedAmount3 * item.amount3 + item.amount * selectedAmount2 + item.taxes).toFixed(2)}}</span></li>
 			</ul>
 			<p id="demo" class="promo" onclick="myFunction()">
             	<a href="#">Have a promo code?</a>
