@@ -116,6 +116,7 @@ export class FirstComponent implements OnInit, OnDestroy {
     this.data.forth = this.forth;
     this.data.fifth = this.fifth;
     this.data.sixth = this.sixth;
+    this.data.test = this.test;
   }
 
 }

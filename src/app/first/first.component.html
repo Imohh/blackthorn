@@ -104,10 +104,9 @@
 						name="test" 
 						type="button" 
 						value="50" 
-						[(ngModel)]="userObject.name"
-						#userObject.name
 						width="10px"/>
-					<input type="button" 
+					<input 
+						type="button" 
 						(click)="myFunc($event)" 
 						value="100" 
 						width="10px"/>
@@ -122,6 +121,7 @@
                 </span>
 				<label>$</label>
 				<input class="donate" (click)="myFunc($event)" type="text" name="input" placeholder="Enter amount">
+				
 			</div>
 			<hr>
 		</div>
@@ -171,7 +171,7 @@
             </ul>
             <ul>
 				<span *ngFor="let item of posts">
-                    <li *ngIf="userObject.name">Donation <span>${{selectedInput}}</span></li>
+                    <li>Donation <span>${{selectedInput}}</span></li>
                 </span>
             </ul>
             <ul>
