@@ -105,7 +105,8 @@ hr {
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
     border-radius: 0 4px 4px 0;
-    width: 12%;
+    width: 18%;
+    padding-left:10px
 }
 
 .donate-input input {

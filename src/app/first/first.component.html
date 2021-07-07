@@ -120,7 +120,12 @@
 						width="10px"/>
                 </span>
 				<label>$</label>
-				<input class="donate" (click)="myFunc($event)" type="text" name="input" placeholder="Enter amount">
+				<input class="donate" 
+				(click)="myFunc($event)" 
+				type="text" 
+				(input)="myFunc($event)"
+				name="input" 
+				placeholder="Enter amount">
 				
 			</div>
 			<hr>
